@@ -1,0 +1,288 @@
+blockquote, body, dd, dir, dl, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hr, input, legend, menu, ol, optgroup, p, pre, tbody, td, textarea, tfoot, th, thead, ul {
+    margin: 0;
+    padding: 0
+}
+
+ol, ul {
+    list-style-type: none;
+    list-style-image: none
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body{
+    background-color: #f4f4f4;
+}
+
+.beatHeader {
+    background: #494A4D;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.beatMain {
+    position: relative;
+    z-index: 2;
+    padding: 0 16px;
+}
+
+.beatMain .imgContainer {
+    padding: 0 16px;
+}
+
+.beatMain .imgContainer img {
+    width: 100%;
+    height: auto;
+    margin-top: 14px;
+}
+
+.beatMain .moonTitleContainer {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 16px;
+}
+
+.beatMain .moonTitleContainer span {
+    color: #FF5500;
+    margin-right: 16px;
+}
+
+.beatMain .itemContent {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.80);
+    line-height: 21px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.beatMain .itemPrice {
+    font-family: STHeitiSC-Light;
+    font-size: 16px;
+    color: #FF5500;
+    line-height: 16.5px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.beatMain .itemTips {
+    font-size: 12px;
+    color: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+
+.beatWord {
+    text-align: center;
+}
+
+.beatWord fieldset {
+    padding: 0.8em;
+    margin: 0 2px;
+    border: 1px dashed #0396FF;
+    background: #fff;
+}
+
+.beatWord fieldset legend {
+    background: #f54d23;
+    border: none;
+    font-size: 0.8rem;
+    line-height: 20px;
+    color: #fff;
+    padding: 0 4px;
+}
+
+.beatWord button {
+    border: nonefont-size: 16px;
+    padding: 6px 15px;
+    background: #f60;
+    display: inline-block;
+    margin: 10px auto;
+    border-radius: 16px;
+    color: #fff;
+}
+
+.aui-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 0px 15px 0px;
+    position: relative;
+}
+
+.aui-flex-box {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0;
+    font-size: 1.75rem;
+    color: #333;
+}
+
+.aui-bao-img {
+    width: 50px;
+    height: 50px;
+}
+
+.ico {
+    width: 104%;
+    height: auto;
+    display: block;
+    border: 0;
+}
+
+.aui-flex-box h5 {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+}
+
+.aui-flex-box span em {
+    font-size: 0.8rem;
+    font-style: normal;
+    float: left;
+    color: #323139;
+    line-height: 1rem;
+    margin-left: 0.5rem;
+}
+
+.ico1 {
+    width: 1.9rem;
+    background-size: 1.9rem;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    display: block;
+    border: none;
+    float: left;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
+.copy {
+    font-size: 0.6rem;
+    text-align: center;
+    background: #fff;
+    margin: 10px 15px;
+    padding: 10px;
+    line-height: 1.3rem;
+    border-radius: 16px;
+}
+
+.itemCopy {
+    background-image: linear-gradient(135deg, #ABDCFF 10%, #0396FF 100%);
+    border: none;
+    font-size: 1rem;
+    padding: 10px 0px;
+    border-radius: 25px;
+    color: #fff;
+    width: 100%;
+}
+
+.aui-palace {
+    padding: 1rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.aui-palace-grid {
+    position: relative;
+    float: left;
+    padding: 1px;
+    width: 25%;
+    box-sizing: border-box;
+    margin: 5px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.aui-palace-grid-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.ico {
+    width: 104%;
+    height: auto;
+    display: block;
+    border: 0;
+}
+
+.aui-palace-grid-text h2 {
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #666666;
+    text-align: center;
+}
+
+.wz {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    background: #f0f0f0;
+    margin: 0px 5px;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+/*红包*/
+.hb {
+    background: #0396FF;
+    text-align: center;
+    border: -1px solid #0396FF;
+    line-height: 20px;
+    color: white;
+    top: 10px;
+    position: relative;
+}
+
+/*CMS导购按钮*/
+.cms-copy-container {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 0 .23rem;
+    margin: 0 auto .31rem auto;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    margin-bottom: 10px;
+}
+
+.cms-box {
+    display: flex;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 0 .23rem;
+    margin: 0 auto .31rem auto;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    margin-bottom: 10px;
+}
+
+.cms {
+    text-align: center;
+    width: 2.5rem;
+    color: #fff;
+    font-size: .28rem;
+    border-radius: 0.6rem;
+    background-image: linear-gradient(135deg, #5EFCE8 10%, #736EFE 100%);
+    text-decoration: none;
+}
