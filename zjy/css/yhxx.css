@@ -1,0 +1,245 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+label, button, input, select {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+    border: 0;
+}
+
+html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    outline: 0;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+.aui-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+}
+
+.aui-flex-box {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.aui-flexView {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.aui-scrollView {
+    width: 100%;
+    height: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    margin-top: 0;
+}
+
+.aui-vou-content {
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    height: 90px;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.aui-vou-button {
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+    width: 110px;
+    background-color: #fde6e9;
+    height: 110px;
+    border-left: 1px dashed #ddd;
+}
+
+.aui-vou-btn-der {
+    width: 85px;
+    height: 25px;
+    line-height: 25px;
+    color: #e83145;
+    border: 1px solid #e83145;
+    background: none;
+    border-radius: 70px;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    font-size: 12px;
+}
+
+.tab-panel {
+    position: relative;
+    overflow: hidden;
+    margin: 5px;
+}
+
+.tab-panel.tab-panel-item {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.tab-panel .tab-panel-item.tab-active {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.tab-panel {
+    position: relative;
+    -webkit-transition: -webkit-transform .15s;
+    transition: -webkit-transform .15s;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.aui-flex-cp-img {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+}
+
+.aui-flex-cp-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+}
+
+.aui-flex-box h2 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.aui-vou-content .aui-flex {
+    padding: 0;
+}
+
+.aui-flex-box p {
+    color: #e31436;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.aui-flex-box p i {
+    font-style: normal;
+    font-size: 0.7rem;
+    font-weight: normal;
+}
+
+.aui-flex-box p em {
+    font-style: normal;
+    font-size: 0.7rem;
+    font-weight: normal;
+}
+
+.aui-vou-button:before {
+    width: 0;
+    height: 0;
+    border-width: 8px 8px 0;
+    border-style: solid;
+    border-color: #e0e0e0 transparent transparent;
+    position: absolute;
+    top: 0;
+    left: -8px;
+}
+
+.aui-vou-button:after {
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    width: 0;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid #e0e0e0;
+}
+
+.aui-Speed {
+    width: 100%;
+    height: 11px;
+    background: #e6e6e6;
+    position: relative;
+    border-radius: 10px;
+}
+
+.aui-Speed .aui-Speed-top {
+    width: 60%;
+    display: block;
+    background: #fc5b6f;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10002;
+    height: 12px;
+    border-radius: 35px;
+}
+
+.aui-vou-button p {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.aui-vou-btn-der-one {
+    background-image: -webkit-gradient(linear, left top, right top, from(#fd6e5c), to(#ef1336));
+    background-image: -webkit-linear-gradient(left, #fd6e5c, #ef1336);
+    background-image: -moz-linear-gradient(left, #fd6e5c, #ef1336);
+    background-image: linear-gradient(to right, #fd6e5c, #ef1336);
+    background-color: #ef1336;
+    color: #fff;
+    border: none;
+}

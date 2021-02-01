@@ -1,0 +1,55 @@
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+ul {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: #3c3c3c;
+}
+
+i {
+    font-style: normal;
+}
+
+#img-daohang {
+    background-color: #fff;
+    margin-top: 12px;
+    border-radius: 10px;
+    font-family: Microsoft YaHei;
+    font-size: 10px;
+}
+
+#img-daohang table {
+    width: 100%;
+}
+
+#img-daohang td {
+    padding-top: 5px;
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+#img-daohang img {
+    width: 40px;
+}
+
+#img-daohang i {
+    line-height: 30px;
+}
