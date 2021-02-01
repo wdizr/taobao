@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+               
+               <head>
+                              <meta charset="utf-8">
+                              <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1, minimum-scale=1, user-scalable=no">
+                              <title>每天都有一个好心情~</title>
+                              <link rel="stylesheet" href="../zjy/css/ys/ys_a.css">
+                              <link rel="stylesheet" href="../zjy/css/yhxx.css">
+                              <link rel="stylesheet" href="../zjy/css/css.css">
+                              <link rel="stylesheet" href="../zjy/css/tc_01.css">
+                              <script type="text/javascript" src="../zjy/js/jquery.min.js"></script>
+                              <script type="text/javascript" src="../zjy/js/clipboard.min.js"></script>
+                              <script type="text/javascript" src="../zjy/js/tc_01.js"></script>
+                              </script>
+               </head>
+               
+               <body style="max-width:600px; margin:0 auto;" id="zjy_body">
+                              <div class="beatMain">
+                                             <!--商品大图-->
+                                             <div class="imgContainer">
+                                                            <img id="img" src="" alt="">
+                                                            <div class="commodity-price"> <span class="pay-price">为你省钱，是我宗旨。</span>
+
+                                                                           <div class="commodity-price-prompt"> <span class="tip">确认收货后返利到账</span>
+
+                                                                           </div>
+                                                            </div>
+                                             </div>
+                                             <!--------- 下面开始自定义 -------->
+                                             <!--【系统】样式A淘口令复制开始-->	<strong class="itemPrice"></strong>
+
+                                             <div id="item_title" style="font-weight: 700;font-size: 14px;margin-bottom: 5px;"></div>
+                                             <div class="info-card info-card">
+                                                            <div class="box3" style="text-align:center;"><span id="taokey"></span>
+                                                                           <br>点「一键复制」然后打开「
+                                                                           <img style="width:12px;height:12px" src="../zjy/tao.jpg">」优惠购买</div>
+                                             </div>
+                                             <button id="copy" class="itemCopy" data-clipboard-text="">一 键 复 制</button>
+                                             <!--【系统】样式A淘口令复制结束-->
+                                             <!--美团开始-->
+                                             <div style="margin-top:1rem;text-align:center;">
+                                                            <a href="http://dpurl.cn/rUPtrrE">
+                                                                           <img src="https://img.alicdn.com/imgextra/i2/2208038337673/O1CN01KTzYOt26YHdyQq8D3_!!2208038337673.png" width="100%" style="border-radius:10px">
+                                                            </a>
+                                             </div>
+                                             <!--美团结束-->
+                                             <!--饿了么cps开始-->
+                                             <div style="margin-top:1rem;text-align:center;">
+                                                            <a href="http://tao.shuo.zone/饿了么外卖-红包天天领-最高66元-长按识别.jpg">
+                                                                            <img src="https://img.alicdn.com/imgextra/i1/2208038337673/O1CN01jqGrEB26YHduMgJnN_!!2208038337673.png" width="100%" style="border-radius:10px">
+                                                            </a>
+                                            </div>
+                                            <!--饿了么cps结束-->
+                                             <!--------- 这里结束自定义 -------->
+                              </div>
+                              <script>
+                                             function getParams(paras) {
+                                                            var url = decodeURI(location.href);
+                                                            var paraString = url.substring(url.indexOf("?") + 1, url.length).split(/[&^]/);
+                                                            var returnValue;
+                                                            for (i = 0; i < paraString.length; i++) {
+                                                                           var tempParas = paraString[i].split('=')[0];
+                                                                           var parasValue = paraString[i].split('=')[1];
+                                                                           if (tempParas === paras) returnValue = parasValue;
+                                                            }
+                                                            if (typeof(returnValue) == "undefined") {
+                                                                           return "";
+                                                            } else {
+                                                                           return returnValue;
+                                                            }
+                                             }
+                                             $(function() {
+                                                            var taowords = getParams('key');
+                                                            taowords = taowords.match(/\w+/);
+                                                            if (taowords == null) {
+                                                                           var taowords = getParams('keys');
+                                                                           var taowords = taowords.substring(5, 25);
+                                                                           var taowords = '8' + taowords + '/:/';
+                                                            } else {
+                                                                           taowords = '8￥' + taowords + '￥/:/';
+                                                            }
+                                                            var url = decodeURIComponent(getParams('url'));
+                                                            var image = decodeURIComponent(getParams('img'));
+                                                            $('#img').attr('src', image);
+                                                            $('#coupons').attr('href', url);
+                                                            $('#copy').attr('data-clipboard-text', taowords);
+                                                            $('#taokey').text(taowords);
+                                             });
+                                             var clipboard = new Clipboard('.itemCopy');
+                                             clipboard.on('success', function(e) {
+                                                            if (e.trigger.disabled == false || e.trigger.disabled == undefined) {
+                                                                           e.trigger.innerHTML = "复制成功，打开淘宝会自动弹出窗口";
+                                                                           e.trigger.style.backgroundColor = "#9ED29E";
+                                                                           e.trigger.style.borderColor = "#9ED29E";
+                                                                           e.trigger.disabled = true;
+                                                                           setTimeout(function() {
+                                                                                          e.trigger.innerHTML = "一键复制";
+                                                                                          e.trigger.style.backgroundColor = "#f54d23";
+                                                                                          e.trigger.style.borderColor = "#f54d23";
+                                                                                          e.trigger.disabled = false;
+                                                                           }, 2000);
+                                                            }
+                                             });
+                                             clipboard.on('error', function(e) {
+                                                            e.trigger.innerHTML = "复制失败";
+                                                            e.trigger.style.backgroundColor = "#8f8f8f";
+                                                            e.trigger.style.borderColor = "#8f8f8f";
+                                             });
+                                             $(function() {
+                                                            var isShow = 0;
+                                                            var ua = navigator.userAgent.toLowerCase();
+                                                            if (ua.match(/iphone/i) == "iphone" || ua.match(/ipad/i) == "ipad") {
+                                                                           var iphoneInfo = ua.match(/iphone os (\d{1,})/i);
+                                                                           var iosVersion = iphoneInfo[1];
+                                                                           if (iosVersion >= 10 || ua.match(/ipad/i) == 'ipad') {
+                                                                                          $('.itemCopy').show();
+                                                                           }
+                                                            } else {
+                                                                           $('.itemCopy').show();
+                                                            }
+                                             });
+                              </script>
+               </body>
+
+</html>

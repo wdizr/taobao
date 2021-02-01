@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+               
+               <head>
+                              <meta charset="utf-8">
+                              <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1, minimum-scale=1, user-scalable=no">
+                              <title>每天都有一个好心情~</title>
+                              <link rel="stylesheet" href="../zjy/css/ys/ys_c.css">
+                              <link rel="stylesheet" href="../zjy/css/yhxx.css">
+                              <link rel="stylesheet" href="../zjy/css/css.css">
+                              <link rel="stylesheet" href="../zjy/css/tc_01.css">
+                              <script type="text/javascript" src="../zjy/js/jquery.min.js"></script>
+                              <script type="text/javascript" src="../zjy/js/clipboard.min.js"></script>
+                              <script type="text/javascript" src="../zjy/js/tc_01.js"></script>
+                              </script>
+               </head>
+               
+               <body style="max-width:600px; margin:0 auto;">
+                              <div style="height:13rem;width:100%;top:0px;background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);z-index:-99;">
+                                             <div class="beatMain">
+                                                            <div class="imgContainer" style="text-align:center;">
+                                                                           <img id="img" src="" alt="" width="90%" style=" border-radius: 15px;">
+                                                            </div>
+                                                            <!--------- 这里开始自定义 -------->
+                                                            <!--【系统】样式C淘口令复制开始-->
+                                                            <div class="copy" style="font-size:0.75em;"> <span id="taokey"></span>
+                                                                           <br>点「一键复制」，然后打开「
+                                                                           <img style="width:12px;height:12px" src="../zjy/tao.jpg">」优惠购买</div>
+                                                            <div style="margin:0px 15px;">
+                                                                           <button id="copy" type="button" class="itemCopy" style=" ">一 键 复 制</button>
+                                                            </div>
+                                                            <!--【系统】样式C淘口令复制结束-->
+                                                            <!--淘宝开始-->
+                                                            <div style="margin-top:1rem;text-align:center;">
+                                                                           <a href="http://tao.shuo.zone/index.html?key=pFBtcGszgmH&img=https://img.alicdn.com/imgextra/i2/O1CN01cBoM0e1YQJqM5YaJO_!!6000000003053-0-tps-800-800.jpg">
+                                                                                          <img src="https://img.alicdn.com/imgextra/i4/2053469401/O1CN01jZf6qJ2JJi4N4LsU4_!!2053469401.jpg" width="100%" style="border-radius:10px">
+                                                                           </a>
+                                                            </div>
+                                                            <!--淘宝结束-->
+                                                            <!--京东开始-->
+                                                            <div style="margin-top:1rem;text-align:center;">
+                                                                           <a href="https://u.jd.com/tQirEgc">
+                                                                                          <img src="https://s3.ax1x.com/2021/01/20/sRXrWD.jpg" width="100%" style="border-radius:10px">
+                                                                           </a>
+                                                            </div>
+                                                            <!--京东结束-->
+                                                            <!--美团开始-->
+                                                            <div style="margin-top:1rem;text-align:center;">
+                                                                           <a href="http://dpurl.cn/rUPtrrE">
+                                                                                          <img src="https://mpstatic.qingting123.com/img/take-out/banner03.jpg" width="100%" style="border-radius:10px">
+                                                                           </a>
+                                                            </div>
+                                                            <!--美团结束-->
+                                                            <!--饿了么cps开始-->
+                                                            <div style="margin-top:1rem;text-align:center;">
+                                                                           <a href="http://tao.shuo.zone/饿了么外卖-红包天天领-最高66元-长按识别.jpg">
+                                                                                          <img src="https://mpstatic.qingting123.com/img/take-out/banner02.png" width="100%" style="border-radius:10px">
+                                                                           </a>
+                                                            </div>
+                                                            <!--饿了么cps结束-->
+                                                            <!--------- 这里结束自定义 -------->
+                                             </div>
+                              </div>
+                              <script>
+                                             function getParams(paras) {
+                                                            var url = decodeURI(location.href);
+                                                            var paraString = url.substring(url.indexOf("?") + 1, url.length).split(/[&^]/);
+                                                            var returnValue;
+                                                            for (i = 0; i < paraString.length; i++) {
+                                                                           var tempParas = paraString[i].split('=')[0];
+                                                                           var parasValue = paraString[i].split('=')[1];
+                                                                           if (tempParas === paras) returnValue = parasValue;
+                                                            }
+                                                            if (typeof(returnValue) == "undefined") {
+                                                                           return "";
+                                                            } else {
+                                                                           return returnValue;
+                                                            }
+                                             }
+                                             $(function() {
+                                                            var taowords = getParams('key');
+                                                            taowords = taowords.match(/\w+/);
+                                                            var url = decodeURIComponent(getParams('url'));
+                                                            var image = decodeURIComponent(getParams('img'));
+                                                            $('#img').attr('src', image);
+                                                            $('#coupons').attr('href', url);
+                                                            $('#copy').attr('data-clipboard-text', '8￥' + taowords + '￥/:/');
+                                                            $('#taokey').text('8￥' + taowords + '￥/:/');
+                                             });
+                                             var clipboard = new Clipboard('.itemCopy');
+                                             clipboard.on('success', function(e) {
+                                                            if (e.trigger.disabled == false || e.trigger.disabled == undefined) {
+                                                                           e.trigger.innerHTML = "复制成功，打开淘宝会自动弹出窗口";
+                                                                           e.trigger.style.backgroundColor = "#9ED29E";
+                                                                           e.trigger.style.borderColor = "#9ED29E";
+                                                                           e.trigger.disabled = true;
+                                                                           setTimeout(function() {
+                                                                                          e.trigger.innerHTML = "一键复制";
+                                                                                          e.trigger.style.backgroundColor = "#f54d23";
+                                                                                          e.trigger.style.borderColor = "#f54d23";
+                                                                                          e.trigger.disabled = false;
+                                                                           }, 2000);
+                                                            }
+                                             });
+                                             clipboard.on('error', function(e) {
+                                                            e.trigger.innerHTML = "复制失败";
+                                                            e.trigger.style.backgroundColor = "#8f8f8f";
+                                                            e.trigger.style.borderColor = "#8f8f8f";
+                                             });
+                                             $(function() {
+                                                            var isShow = 0;
+                                                            var ua = navigator.userAgent.toLowerCase();
+                                                            if (ua.match(/iphone/i) == "iphone" || ua.match(/ipad/i) == "ipad") {
+                                                                           var iphoneInfo = ua.match(/iphone os (\d{1,})/i);
+                                                                           var iosVersion = iphoneInfo[1];
+                                                                           if (iosVersion >= 10 || ua.match(/ipad/i) == 'ipad') {
+                                                                                          $('.itemCopy').show();
+                                                                           }
+                                                            } else {
+                                                                           $('.itemCopy').show();
+                                                            }
+                                             });
+                              </script>
+               </body>
+
+</html>
